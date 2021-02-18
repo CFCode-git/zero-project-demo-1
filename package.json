@@ -24,6 +24,8 @@
     "css-loader": "^5.0.2",
     "css-modules-typescript-loader": "^4.0.1",
     "html-webpack-plugin": "^5.1.0",
+    "less": "^4.1.1",
+    "less-loader": "^8.0.0",
     "sass": "^1.32.7",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
