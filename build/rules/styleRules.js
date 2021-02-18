@@ -1,3 +1,4 @@
+const { cacheLoader, threadLoader } = require("../loaders");
 const { resolve } = require("./../utils");
 
 module.exports = [

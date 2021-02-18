@@ -1,9 +1,11 @@
-const { resolve } = require("./../utils");
+const { cacheLoader, threadLoader } = require("./../loaders");
 
 module.exports = [
   {
     test: /\.(j|t)sx?$/,
     use: [
+      cacheLoader,
+      threadLoader(),
       {
         loader: "babel-loader",
         options: {
