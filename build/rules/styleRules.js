@@ -5,6 +5,9 @@ module.exports = [
       "style-loader",
       {
         loader: "css-loader",
+        options: {
+          modules: true,
+        },
       },
       {
         loader: "sass-loader",
