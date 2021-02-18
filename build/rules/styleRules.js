@@ -7,6 +7,8 @@ module.exports = [
     use: [
       "style-loader",
       "css-modules-typescript-loader",
+      cacheLoader,
+      threadLoader(2),
       {
         loader: "css-loader",
         options: {
@@ -18,10 +20,7 @@ module.exports = [
       {
         loader: "sass-loader",
         options: {
-          implementation: require("sass"),
-          sassOptions: {
-            includePaths: [resolve("src/styles")],
-          },
+          includePaths: [resolve("src/styles")],
         },
       },
     ],
