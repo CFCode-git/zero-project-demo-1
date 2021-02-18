@@ -3,7 +3,7 @@ import React from "react";
 const ViewTest = () => {
   return (
     <div>
-      <div>ViewTest</div>
+      <div>ViewTest2</div>
     </div>
   );
 };
