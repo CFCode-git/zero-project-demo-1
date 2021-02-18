@@ -7,6 +7,8 @@ import styles from "./index.scss";
 import ViewTest from "@views/ViewsTest/index";
 import SharedTest from "@shared/SharedTest/index";
 
+import App from "@views/App/app";
+
 const render = () => {
   ReactDOM.render(
     <div className={styles.test}>
@@ -16,6 +18,10 @@ const render = () => {
       <div>
         <ViewTest />
         <SharedTest />
+      </div>
+      <hr />
+      <div>
+        <App />
       </div>
     </div>,
     document.querySelector("#app")

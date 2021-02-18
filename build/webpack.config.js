@@ -32,6 +32,9 @@ module.exports = {
   module: {
     rules: [...jsRules, ...styleRules],
   },
+  devServer: {
+    historyApiFallback: true,
+  },
   plugins: [...plugins],
   devtool: "source-map",
 };
