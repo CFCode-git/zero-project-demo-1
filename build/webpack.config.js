@@ -33,4 +33,5 @@ module.exports = {
     rules: [...jsRules, ...styleRules],
   },
   plugins: [...plugins],
+  devtool: "source-map",
 };
