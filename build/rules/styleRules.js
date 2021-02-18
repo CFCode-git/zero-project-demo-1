@@ -1,3 +1,5 @@
+const { resolve } = require("./../utils");
+
 module.exports = [
   {
     test: /\.scss$/,
@@ -16,6 +18,9 @@ module.exports = [
         loader: "sass-loader",
         options: {
           implementation: require("sass"),
+          sassOptions: {
+            includePaths: [resolve("src/styles")],
+          },
         },
       },
     ],
