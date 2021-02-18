@@ -4,8 +4,8 @@ import { Button } from "antd";
 
 import styles from "./index.scss";
 
-import ViewTest from "./containers/views/ViewsTest/index";
-import SharedTest from "./containers/shared/SharedTest/index";
+import ViewTest from "@views/ViewsTest/index";
+import SharedTest from "@shared/SharedTest/index";
 
 const render = () => {
   ReactDOM.render(

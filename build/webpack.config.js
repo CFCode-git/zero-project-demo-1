@@ -17,6 +17,10 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],
+    alias: {
+      "@views": resolve("src/containers/views"),
+      "@shared": resolve("src/containers/shared"),
+    },
   },
   module: {
     rules: [...jsRules, ...styleRules],
