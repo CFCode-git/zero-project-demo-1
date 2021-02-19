@@ -5,6 +5,8 @@ import ShowCount from "@components/ShowCount";
 import CountOperation from "@components/CountOperation";
 import { getArticleList } from "@services/api";
 
+import styles from "./page-a.scss";
+
 const PageA = ({ history }: RouteComponentProps) => {
   const getList = async () => {
     try {
@@ -27,6 +29,8 @@ const PageA = ({ history }: RouteComponentProps) => {
       <div>
         <Button onClick={getList}>获取文章列表</Button>
       </div>
+      <hr />
+      <div className={styles["page-a"]}>page-a css</div>
     </div>
   );
 };
