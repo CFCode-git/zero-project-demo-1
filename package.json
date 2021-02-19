@@ -8,10 +8,11 @@
         "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.js",
         "lint": "eslint src --ext .ts,.tsx & stylelint \"./src/**/*.scss\""
     },
-    "husky":{
-      "hooks":{
-        "pre-commit":"npm run lint"
-      }
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
     },
     "keywords": [],
     "author": "",
@@ -23,6 +24,8 @@
         "@babel/plugin-syntax-dynamic-import": "^7.8.3",
         "@babel/preset-react": "^7.12.13",
         "@babel/preset-typescript": "^7.12.16",
+        "@commitlint/cli": "^11.0.0",
+        "@commitlint/config-conventional": "^11.0.0",
         "@types/qs": "^6.9.5",
         "@types/react": "^17.0.2",
         "@types/react-dom": "^17.0.1",
