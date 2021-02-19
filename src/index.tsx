@@ -8,7 +8,7 @@ import ViewTest from "@views/ViewsTest/index";
 import SharedTest from "@shared/SharedTest/index";
 
 import App from "@views/App/app";
-import { Provider } from "@store/count/index";
+import { Provider } from "@store/index";
 
 const render = () => {
   ReactDOM.render(

@@ -49,7 +49,7 @@
       "@shared/*": ["containers/shared/*"],
       "services/*": ["services/*"],
       "@constants": ["constants/*"],
-      "@components": ["components/*"],
+      "@components/*": ["components/*"],
       "@store/*": ["store/*"],
       "@utils/*": ["utils/*"],
       "@assets": ["assets/*"]

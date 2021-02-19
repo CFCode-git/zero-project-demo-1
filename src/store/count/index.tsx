@@ -5,7 +5,7 @@ import React, {
   useReducer,
   Dispatch,
 } from "react";
-import { reducer } from "./reducer";
+import reducer from "./reducer";
 
 export const initState = {
   count: 0,
@@ -24,4 +24,4 @@ export const Provider: ComponentType = (props) => {
   );
 };
 
-export const useTestStore = useContext(CountCtx);
+export const useTestStore = () => useContext(CountCtx);
