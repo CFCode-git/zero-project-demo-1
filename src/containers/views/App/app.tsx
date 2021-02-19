@@ -1,29 +1,22 @@
-import React, { Suspense } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { Suspense } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import routerMap from "./routerMap";
+import routerMap from './routerMap'
 
 const App = () => {
-  return (
-    <>
-      <Suspense fallback={<div>loading</div>}>
-        <Router>
-          <Switch>
-            {routerMap.map((item) => {
-              return (
-                <Route
-                  exact
-                  path={item.path}
-                  key={item.path}
-                  component={item.component}
-                />
-              );
-            })}
-          </Switch>
-        </Router>
-      </Suspense>
-    </>
-  );
-};
+    return (
+        <>
+            <Suspense fallback={<div>loading</div>}>
+                <Router>
+                    <Switch>
+                        {routerMap.map((item) => {
+                            return <Route exact path={item.path} key={item.path} component={item.component} />
+                        })}
+                    </Switch>
+                </Router>
+            </Suspense>
+        </>
+    )
+}
 
-export default App;
+export default App

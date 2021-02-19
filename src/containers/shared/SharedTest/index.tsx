@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
 const SharedTest = () => {
-  return (
-    <div>
-      <div>SharedTest</div>
-    </div>
-  );
-};
+    return (
+        <div>
+            <div>SharedTest</div>
+        </div>
+    )
+}
 
-export default SharedTest;
+export default SharedTest
