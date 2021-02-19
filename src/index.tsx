@@ -8,6 +8,7 @@ import ViewTest from "@views/ViewsTest/index";
 import SharedTest from "@shared/SharedTest/index";
 
 import App from "@views/App/app";
+import { Provider } from "@store/count/index";
 
 const render = () => {
   ReactDOM.render(
@@ -21,7 +22,9 @@ const render = () => {
       </div>
       <hr />
       <div>
-        <App />
+        <Provider>
+          <App />
+        </Provider>
       </div>
     </div>,
     document.querySelector("#app")
