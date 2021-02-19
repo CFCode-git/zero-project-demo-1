@@ -1,3 +1,5 @@
+const TerserPlugin = require("terser-webpack-plugin");
+
 module.exports = {
   runtimeChunk: {
     name: "manifest",
@@ -24,4 +26,9 @@ module.exports = {
       },
     },
   },
+  minimizer: [
+    new TerserPlugin({
+      parallel: true,
+    }),
+  ],
 };
