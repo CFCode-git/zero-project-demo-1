@@ -1,8 +1,12 @@
 import { lazy } from "react";
 
-const PageA = lazy(() => import("@views/PageA"));
+const PageA = lazy(
+  () => import(/* webpackChunkName:"page-a" */ "@views/PageA")
+);
 
-const PageB = lazy(() => import("@views/PageB"));
+const PageB = lazy(
+  () => import(/* webpackChunkName:"page-b" */ "@views/PageB")
+);
 
 const routerMap = [
   {
