@@ -14,7 +14,8 @@ module.exports = {
   },
   output: {
     path: resolve("dist"),
-    filename: "[name].js",
+    filename: "[name].[chunkhash].js",
+    chunkFilename: "[name].[chunkhash].js",
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],
