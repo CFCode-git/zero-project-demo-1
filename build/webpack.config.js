@@ -5,18 +5,21 @@ const plugins = require("./plugins");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 const optimization = require("./optimization");
 
+const isDev = process.env.NODE_ENV === "development";
+
 /**
  * @type {import('webpack').Configuration}
  */
 
 module.exports = {
+  mode: process.env.NODE_ENV,
   entry: {
     app: resolve("src/index.tsx"),
   },
   output: {
     path: resolve("dist"),
-    filename: "[name].[chunkhash].js",
-    chunkFilename: "[name].[chunkhash].js",
+    filename: isDev ? "[name].js" : "[name].[chunkhash].js",
+    chunkFilename: isDev ? "[name].js" : "[name].[chunkhash].js",
     // publicPath: "https://cdn.xxx.com/",
   },
   resolve: {
@@ -39,6 +42,6 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [...plugins],
-  devtool: "source-map",
-  optimization,
+  devtool: isDev ? "source-map" : undefined,
+  optimization: isDev ? {} : optimization,
 };
