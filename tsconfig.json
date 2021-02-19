@@ -47,7 +47,7 @@
     "paths": {
       "@views/*": ["containers/views/*"],
       "@shared/*": ["containers/shared/*"],
-      "services/*": ["services/*"],
+      "@services/*": ["services/*"],
       "@constants": ["constants/*"],
       "@components/*": ["components/*"],
       "@store/*": ["store/*"],
