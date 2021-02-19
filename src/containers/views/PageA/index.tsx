@@ -31,6 +31,8 @@ const PageA = ({ history }: RouteComponentProps) => {
       </div>
       <hr />
       <div className={styles["page-a"]}>page-a css</div>
+      <hr />
+      <div>{process.env.NODE_ENV}</div>
     </div>
   );
 };
