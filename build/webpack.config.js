@@ -3,6 +3,7 @@ const jsRules = require("./rules/jsRules");
 const styleRules = require("./rules/styleRules");
 const plugins = require("./plugins");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const optimization = require("./optimization");
 
 /**
  * @type {import('webpack').Configuration}
@@ -39,4 +40,5 @@ module.exports = {
   },
   plugins: [...plugins],
   devtool: "source-map",
+  optimization,
 };
