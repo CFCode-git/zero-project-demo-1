@@ -16,6 +16,7 @@ module.exports = {
     path: resolve("dist"),
     filename: "[name].[chunkhash].js",
     chunkFilename: "[name].[chunkhash].js",
+    publicPath: "https://cdn.xxx.com/",
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],
